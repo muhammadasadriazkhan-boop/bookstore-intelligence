@@ -1,0 +1,25 @@
+📚 I turned a website into a business dataset, and used it to answer "what should we sell?"
+
+For my Business Data & Text Mining course, I built a Python web scraper for a practice bookstore site (books.toscrape.com). The site was the competitor and the scraper was my market-intelligence tool.
+
+🔧 How it works
+1️⃣ requests downloads each catalogue page
+2️⃣ BeautifulSoup finds every product card and extracts the title, price, star rating, stock status and product link
+3️⃣ The data gets cleaned: "£51.77" becomes 51.77, and star ratings hidden in CSS class names ("star-rating Three") become numbers 1–5
+4️⃣ One reusable function runs inside a loop that follows the "next" button, so the same code handles 3 pages or the full catalogue
+5️⃣ Pandas analyses the data and exports a clean CSV
+
+📊 What 60 scraped books revealed
+• Average price: £35.00
+• 14 books are rated 5★, and they are the cheapest rating group on average (£32.48)
+• The best-rated books start at just £15.94
+• 100% of books are in stock, so a competitor can't win on availability alone
+
+💷 The CEO challenge: maximise total star ratings with only £100
+I treated it as a knapsack optimisation problem and used dynamic programming to choose 6 books for £96.59 with 26 total stars, the best possible score for that budget.
+
+💡 My takeaway: rating quality doesn't track price. A new bookstore should lead with a "top-rated for less" range.
+
+Code on GitHub 👉 [PASTE YOUR GITHUB LINK HERE]
+
+#Python #WebScraping #BeautifulSoup #Pandas #DataAnalytics #BusinessAnalytics #DataMining
